@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--VeryLightGray);
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .text h1 {
+    font-weight: 200;
+    font-size: 2rem;
+    color: var(--VeryDarkBlue);
+}
+
+.container .text h1 span {
+    font-weight: 600;
+}
+
+.container .text p {
+    font-weight: 400;
+    color: var(--GrayishBlue);
+    margin-bottom: 2rem;
+}
+
+.grid-template {
+    width: 72%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2em;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.grid-template .supervisor {
+    position: relative;
+    height: 260px;
+    width: 100%;
+    border-top: 5px solid var(--Cyan);
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 5px 8px 24px -3px rgba(206, 224, 232, 0.82);
+    padding: 1.5em;
+}
+
+.grid-template .teamBuilder {
+    position: relative;
+    height: 260px;
+    width: 100%;
+    border-top: 5px solid var(--Red);
+    border-radius: 5px;
+    background-color: white;
+    margin-bottom: 2em;
+    box-shadow: 5px 8px 24px -3px rgba(206, 224, 232, 0.82);
+    padding: 1.5em;
+
+}
+
+.grid-template .karma {
+    position: relative;
+    height: 260px;
+    width: 100%;
+    border-top: 5px solid var(--Orange);
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 5px 8px 24px -3px rgba(206, 224, 232, 0.82);
+    padding: 1.5em;
+}
+
+.grid-template .calculator {
+    position: relative;
+    height: 260px;
+    width: 100%;
+    border-top: 5px solid var(--Blue);
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 5px 8px 24px -3px rgba(206, 224, 232, 0.82);
+    padding: 1.5em;
+}
+
+.grid-template p {
+    font-weight: 400;
+    color: var(--GrayishBlue);
+    font-size: 14px;
+}
+
+.grid-template img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 2rem;
+}
+
+h2 {
+    color: var(--VeryDarkBlue);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+@media(max-width:375px) {
+    .grid-template {
+        width: 90%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-row-gap: 2em;
+    }
+
+    .grid-sub {
+        display: flex;
+        flex-direction: column;
+    }
+
+    body {
+        height: auto;
+        padding: 1rem;
+    }
+
+    .container .text h1 {
+        font-size: 1.35rem;
+    }
+
+    .container .text p {
+        font-size: 14px;
+        padding: 0px 20px;
+    }
+}
